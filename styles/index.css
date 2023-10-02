@@ -1,0 +1,212 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {}
+
+header {
+    background-color: yellow;
+    text-align: center;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 100vw;
+}
+
+#empty {
+    text-align: center;
+    color: rgb(128, 128, 128);
+    margin: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+}
+
+dialog::backdrop {
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+dialog {
+    margin: auto;
+    border: none;
+    border-radius: .5rem;
+    box-shadow: 0 0 1em rgb(0, 0, 0, 0.3);
+    width: 35%;
+    height: 40%;
+    text-align: center;
+}
+
+input[type="text"] {
+    border: 10px solid yellow;
+    background-color: white;
+    width: 80%;
+    height: 14%;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 10px;
+    transition: 0.1s ease-in-out;
+}
+input[type="text"]:focus {
+    border: 10px solid rgb(215, 215, 0);
+    outline: none;
+}
+
+#Enviar {
+    border: none;
+    background-color: yellow;
+    width: 40%;
+    height: 10%;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 4%;
+    transition: 0.3s ease-in-out;
+}
+#Enviar:hover{
+    background-color:rgb(215, 215, 0);
+    outline: none;
+}
+
+#Limpar {
+    border: none;
+    background-color: yellow;
+    width: 40%;
+    height: 10%;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+#Limpar:hover{
+    background-color:rgb(215, 215, 0);
+    outline: none;
+}
+
+
+#fecha {
+    border: none;
+    background-color: transparent;
+    width: 45px;
+    height: 45px;
+    border-bottom-left-radius: 50%;
+    font-family: "Montserrat";
+    font-size: 2.5em;
+    position: absolute;
+    left: 93%;
+}
+
+textarea {
+    border: 10px solid yellow;
+    border: 10px solid yellow;
+    background-color: white;
+    width: 80%;
+    height: 50%;
+    border-radius: 10px;
+    padding: 5px;
+    transition: 0.1s ease-in-out;
+}
+textarea:focus{
+    border: 10px solid rgb(215, 215, 0);
+    outline: none;
+}
+.fa-circle-xmark{
+    color: yellow;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+}
+.fa-circle-xmark:hover{
+    color: rgb(156, 156, 0);
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#abriMod {
+    border: none;
+    background-color: yellow;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-family: "Montserrat";
+    font-size: 1.5em;
+    position: fixed;
+    top: 90%;
+    left: 90%;
+}
+
+.conteiner-posts {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#post {
+    background-color: yellow;
+    width: 20%;
+    text-align: left;
+    border-radius: 10px;
+    padding: 15px;
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: justify;
+    background-color: #fffffffe;
+    padding: 20px;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@media (max-width: 500px) {
+    dialog {
+        width: 35%;
+    }
+    input[type="text"] {
+        width: 60%;
+        height: 14%;
+    }
+    textarea {
+        width: 60%;
+        height: 50%;
+    }
+    #fecha {
+        width: 20px;
+        height: 20px;
+        left: 83%;
+        font-size: 0.7em;
+    }
+}
+
+@media (max-width: 1000px) {
+    dialog {
+        width: 35%;
+    }
+    input[type="text"] {
+        width: 60%;
+        height: 14%;
+    }
+    textarea {
+        width: 60%;
+        height: 50%;
+    }
+    #fecha {
+        width: 50px;
+        height: 50px;
+        left: 75%;
+        font-size: 2.5;
+    }
+}

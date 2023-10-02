@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="../node_modules/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="../styles/index.css">
+    <script defer src="../scripts/index.js"></script>
+    <script defer src="https://kit.fontawesome.com/ffcb606459.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Say To Me</h1>
+    </header>
+
+    <!--Modelo de cada Post -->
+    <!-- <div id="post">
+        <h2 id="user"></h2>
+        <p id="message"></p>
+    </div> -->
+
+
+    <div class="conteiner-posts">
+
+    </div>
+
+    <dialog>
+        <button id="fecha"><i class="fa-regular fa-circle-xmark"></i></button><br>
+        <input type="text" id="name" placeholder="Digite seu nome aqui"><br>
+        <textarea name="message" id="box-message" maxlength="222" cols="10" rows="10" placeholder="Digite sua mensagem aqui"></textarea><br>
+        <input type="submit" id="Enviar" value="Enviar">
+        <input type="reset" id="Limpar" value="Limpar">
+    </dialog>
+
+
+    <button id="abriMod"><i class="fa-regular fa-plus"></i></button>
+</body>
+
+</html>
