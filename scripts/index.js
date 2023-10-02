@@ -30,7 +30,7 @@ function createElement() {
 }
 
 async function enviaDados() {
-    const postEnvia = await axios.post('http://127.0.0.1:3343/post', {
+    const postEnvia = await axios.post('talk-to-me-api-mplz.onrender.com/post', {
         user: name.value,
         message: boxMessage.value
     }).then(
@@ -41,7 +41,7 @@ async function enviaDados() {
 }
 
 async function pegaDados() {
-    const pegaPosts = await axios.get('http://127.0.0.1:3343/allPosts').then(response => {
+    const pegaPosts = await axios.get('talk-to-me-api-mplz.onrender.com/allPosts').then(response => {
         data = response.data
     }).catch(err => console.log('ERROR:' + err))
     mostraComents(data)
