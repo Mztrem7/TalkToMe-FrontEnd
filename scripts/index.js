@@ -83,11 +83,10 @@ function mostraComents(data) {
         const div = document.createElement('div');
         const h2 = document.createElement('h2');
         const p = document.createElement('p');
-
-        conteinerPost.appendChild(div)
         div.appendChild(h2)
         div.appendChild(p)
         body.appendChild(div)
+        conteinerPost.appendChild(div)
         div.id = 'post'
         h2.id = 'user'
         p.id = 'message'
