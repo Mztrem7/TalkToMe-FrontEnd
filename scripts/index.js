@@ -3,6 +3,7 @@ const modal = document.querySelector('dialog');
 const fecha = document.querySelector('#fecha');
 const btnEnv = document.querySelector('#Enviar');
 const name = document.querySelector('#name');
+const loader = document.querySelector('#loader');
 const allPosts = document.querySelectorAll('#post')
 const boxMessage = document.querySelector('#box-message');
 let data;
@@ -64,16 +65,18 @@ async function enviaDados() {
 
         }
     }
-
+    
         
 }
 
 async function pegaDados() {
+    loader.style.display = 'block';
     const pegaPosts = await axios.get('https://talk-to-me-api-mplz.onrender.com/allPosts').then(response => {
         data = response.data
         console.log(data)
     }).catch(err => console.log('ERROR:' + err))
     mostraComents(data)
+    loader.style.display = 'none';
 }
 
 function mostraComents(data) {
@@ -95,15 +98,17 @@ function mostraComents(data) {
 
         h2.innerText = datas[i].nome
         p.innerText = datas[i].conteudo        
-    
             
     }
 }
 
 const age = async () => {
-    await enviaDados()
     createElement()
     modal.close()
+    await enviaDados()
+    setTimeout(() => {
+        location.reload()
+    }, 1000);
 }
 
 
