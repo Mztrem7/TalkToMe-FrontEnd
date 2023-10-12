@@ -5,7 +5,9 @@
     padding: 0;
 }
 
-body {}
+body {
+    overflow: hidden;
+}
 
 header {
     background-color: yellow;
@@ -150,6 +152,7 @@ textarea:focus{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column-reverse;
+    overflow: hidden;
 }
 
 #post {
@@ -172,9 +175,13 @@ p {
     font-family: 'Montserrat', sans-serif;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 414px) {
+    header{
+        width: 414px;
+    }
     dialog {
-        width: 35%;
+        width: 75%;
+        height: 80%;
     }
     input[type="text"] {
         width: 60%;
