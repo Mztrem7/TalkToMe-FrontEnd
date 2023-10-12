@@ -6,6 +6,7 @@
 }
 
 body {
+    background-color: #333;
 }
 
 header {
@@ -151,6 +152,7 @@ textarea:focus{
 .conteiner-posts {
     display: flex;
     flex-wrap: wrap;
+    padding: 0px  15px 15px 15px;
     flex-direction: column-reverse;
 }
 
@@ -161,7 +163,6 @@ textarea:focus{
     text-align: left;
     border-radius: 10px;
     padding: 15px;
-    margin-left: 15px;
     margin-bottom: 20px;
 }
 
@@ -173,6 +174,58 @@ p {
     text-overflow: ellipsis;
     border-radius: 10px;
     font-family: 'Montserrat', sans-serif;
+}
+
+
+h4 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    font-weight: 200;
+    opacity: 1;
+    font-family: sans-serif;
+    color: #777;
+  }
+#loader {
+    animation: animate 1.5s linear infinite;
+    clip: rect(0, 80px, 80px, 40px); 
+    height: 80px;
+    display: none;
+    width: 80px;
+    position: absolute;
+    left: calc(50% - 40px);
+top: calc(50% - 40px);
+}
+@keyframes animate {
+0% { 
+    transform: rotate(0deg)
+}
+100% { 
+    transform: rotate(220deg)
+}
+}
+#loader:after {
+    animation: animate2 1.5s ease-in-out infinite;
+    clip: rect(0, 80px, 80px, 40px);
+    content:'';
+    border-radius: 50%; 
+    height: 80px;
+    width: 80px;
+    position: absolute; 
+} 
+@keyframes animate2 {
+    0% {
+        box-shadow: inset #fff 0 0 0 17px;
+        transform: rotate(-140deg);
+    }
+    50% {
+        box-shadow: inset #fff 0 0 0 2px;
+    }
+    100% {
+        box-shadow: inset #fff 0 0 0 17px;
+        transform: rotate(140deg);
+    }
 }
 
 @media (max-width: 414px) {
