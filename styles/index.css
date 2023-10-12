@@ -6,7 +6,6 @@
 }
 
 body {
-
 }
 
 header {
@@ -144,8 +143,8 @@ textarea:focus{
     font-family: "Montserrat";
     font-size: 1.5em;
     position: fixed;
-    top: 90%;
-    left: 90%;
+    top: 80%;
+    left: 80%;
 }
 
 .conteiner-posts {
@@ -156,6 +155,7 @@ textarea:focus{
 
 #post {
     background-color: yellow;
+    text-wrap: wrap;
     width: 96vw;
     text-align: left;
     border-radius: 10px;
@@ -176,14 +176,17 @@ p {
 
 @media (max-width: 414px) {
     header{
-        width: 414px;
+        width: 444px;
+    }
+    #post{
+        width: 397px;
     }
     dialog {
-        width: 75%;
-        height: 80%;
+        width: 310px;
+        height: 331px;
     }
     input[type="text"] {
-        width: 60%;
+        width: 248px;
         height: 14%;
     }
     textarea {
@@ -195,25 +198,5 @@ p {
         height: 20px;
         left: 83%;
         font-size: 0.7em;
-    }
-}
-
-@media (max-width: 1000px) {
-    dialog {
-        width: 35%;
-    }
-    input[type="text"] {
-        width: 60%;
-        height: 14%;
-    }
-    textarea {
-        width: 60%;
-        height: 50%;
-    }
-    #fecha {
-        width: 50px;
-        height: 50px;
-        left: 75%;
-        font-size: 2.5;
     }
 }
