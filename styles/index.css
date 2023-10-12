@@ -96,6 +96,7 @@ input[type="text"]:focus {
 }
 
 
+
 #fecha {
     border: none;
     background-color: transparent;
@@ -155,7 +156,7 @@ textarea:focus{
 
 #post {
     background-color: yellow;
-    text-wrap: wrap;
+    word-wrap: break-word;
     width: 96vw;
     text-align: left;
     border-radius: 10px;
