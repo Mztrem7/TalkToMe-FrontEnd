@@ -108,7 +108,7 @@ const age = async () => {
     await enviaDados()
     setTimeout(() => {
         location.reload()
-    }, 1000);
+    }, 3000);
 }
 
 
