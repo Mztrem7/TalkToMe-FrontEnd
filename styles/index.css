@@ -78,7 +78,7 @@ input[type="text"]:focus {
     transition: 0.3s ease-in-out;
 }
 #Enviar:hover{
-    background-color:#25D964;
+    background-color:#1fbc56;
     outline: none;
 }
 
@@ -92,7 +92,7 @@ input[type="text"]:focus {
     transition: 0.3s ease-in-out;
 }
 #Limpar:hover{
-    background-color:#25D964;
+    background-color:#1fbc56;
     outline: none;
 }
 
@@ -131,7 +131,7 @@ textarea:focus{
     transition: 0.1s ease-in-out;
 }
 .fa-circle-xmark:hover{
-    color: rgb(156, 156, 0);
+    color: #1fbc56;
     margin-right: 10px;
     cursor: pointer;
 }
@@ -255,7 +255,3 @@ top: calc(50% - 40px);
         font-size: 0.7em;
     }
 }
-
-
-
-
