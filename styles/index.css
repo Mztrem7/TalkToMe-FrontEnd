@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    background-color: yellow;
+    background-color: #25D964;
     text-align: center;
     height: 90px;
     display: flex;
@@ -53,7 +53,7 @@ dialog {
 }
 
 input[type="text"] {
-    border: 10px solid yellow;
+    border: 10px solid #25D964;
     background-color: white;
     width: 80%;
     height: 14%;
@@ -63,13 +63,13 @@ input[type="text"] {
     transition: 0.1s ease-in-out;
 }
 input[type="text"]:focus {
-    border: 10px solid rgb(215, 215, 0);
+    border: 10px solid #25D964;
     outline: none;
 }
 
 #Enviar {
     border: none;
-    background-color: yellow;
+    background-color: #25D964;
     width: 40%;
     height: 10%;
     border-radius: 5px;
@@ -78,13 +78,13 @@ input[type="text"]:focus {
     transition: 0.3s ease-in-out;
 }
 #Enviar:hover{
-    background-color:rgb(215, 215, 0);
+    background-color:#25D964;
     outline: none;
 }
 
 #Limpar {
     border: none;
-    background-color: yellow;
+    background-color: #25D964;
     width: 40%;
     height: 10%;
     cursor: pointer;
@@ -92,7 +92,7 @@ input[type="text"]:focus {
     transition: 0.3s ease-in-out;
 }
 #Limpar:hover{
-    background-color:rgb(215, 215, 0);
+    background-color:#25D964;
     outline: none;
 }
 
@@ -111,8 +111,8 @@ input[type="text"]:focus {
 }
 
 textarea {
-    border: 10px solid yellow;
-    border: 10px solid yellow;
+    border: 10px solid #25D964;
+    border: 10px solid #25D964;
     background-color: white;
     width: 80%;
     height: 50%;
@@ -121,11 +121,11 @@ textarea {
     transition: 0.1s ease-in-out;
 }
 textarea:focus{
-    border: 10px solid rgb(215, 215, 0);
+    border: 10px solid #25D964;
     outline: none;
 }
 .fa-circle-xmark{
-    color: yellow;
+    color: #25D964;
     margin-right: 10px;
     cursor: pointer;
     transition: 0.1s ease-in-out;
@@ -138,7 +138,7 @@ textarea:focus{
 
 #abriMod {
     border: none;
-    background-color: yellow;
+    background-color: #25D964;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -157,7 +157,7 @@ textarea:focus{
 }
 
 #post {
-    background-color: yellow;
+    background-color: #25D964;
     word-wrap: break-word;
     width: 96vw;
     text-align: left;
@@ -254,3 +254,7 @@ top: calc(50% - 40px);
         font-size: 0.7em;
     }
 }
+
+
+
+
