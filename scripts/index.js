@@ -1,11 +1,11 @@
 const button = document.getElementById('abriMod');
-const modal = document.querySelector('dialog');
 const fecha = document.querySelector('#fecha');
 const btnEnv = document.querySelector('#Enviar');
 const name = document.querySelector('#name');
 const loader = document.querySelector('#loader');
 const allPosts = document.querySelectorAll('#post')
 const boxMessage = document.querySelector('#box-message');
+const modal = document.querySelector('dialog');
 let data;
 const body = document.querySelector('body');
 const conteinerPost = document.querySelector(".conteiner-posts")
@@ -34,36 +34,40 @@ function createElement() {
 
 async function enviaDados() {
     const message = boxMessage.value
+    const verification=false;
     const text = message.split(' ')
     
     for(var i = 0; i < text.length; i++){
         console.log(text[i])
         if(textos.includes(text[i])){
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Sem palavras feias amigo!'
-            })
-            console.log("Não foi enviado!")
+            verification = true
         }else{
-            Swal.fire({
-                position: 'center',
-                icon: 'success',
-                title: 'Você fez um comentário!',
-                showConfirmButton: false,
-                timer: 1500
-            })
-
-            const postEnvia = await axios.post('https://talk-to-me-api-mplz.onrender.com/post', {
-                user: name.value,
-                message: boxMessage.value
-            }).then(
-                () => console.log('Enviado com sucesso')
-            ).catch(
-                (err) => console.log('ERROR: ' + err)
-            )
-
+            
         }
+    }
+    if(verification){
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Sem palavras feias amigo!'
+        })
+        console.log("Não foi enviado!") 
+    }else{
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Você fez um comentário!',
+            showConfirmButton: false,
+            timer: 1500
+        })
+        const postEnvia = await axios.post('https://talk-to-me-api-mplz.onrender.com/post', {
+        user: name.value,
+        message: boxMessage.value
+        }).then(
+            () => console.log('Enviado com sucesso')
+        ).catch(
+            (err) => console.log('ERROR: ' + err)
+        )
     }
     
         
